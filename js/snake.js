@@ -21,7 +21,7 @@ var profiler =  new Profiler();
 /**
  * TODO:
  * Make this class a Mediator: let it handle all the
- * interactions between snake and filed, snake and food randomizer, etc.
+ * interactions between snake and field, snake and food randomizer, etc.
  *
  * P.S. -- almost done
  */
@@ -650,21 +650,21 @@ Initiator.initiate = function() {
   var snake = new Snake();
   var foodRandomizer = new FoodRandomizer();
 
-  foodRandomizer.
-    setField(field);
+  foodRandomizer
+    .setField(field);
 
-  field.
-    setId('field')
+  field
+    .setId('field')
     .setFoodRandomizer(foodRandomizer)
     .setSnake(snake);
 
-  snake.
-    setFilterManager(filterManager).
-    setId('snake').
-    setField(field);
+  snake
+    .setFilterManager(filterManager)
+    .setId('snake')
+    .setField(field);
 
-  filterManager.
-    setSnake(snake);
+  filterManager
+    .setSnake(snake);
 
   snake.start();
 }

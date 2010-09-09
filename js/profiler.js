@@ -5,7 +5,7 @@ function Profiler() {
       try {
         var lastTimestamp = _timestamps[_timestamps.length - 1];
         var currentTimestamp = (new Date()).parse();
-        console.log(currentTimestamp - currentTimestamp);
+        console.log(currentTimestamp - lastTimestamp);
         _timestamps.push(currentTimestamp);
       }
       catch(e) {}
