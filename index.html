@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>snake</title>
+  <script src="/js/jquery.js" type="text/javascript"></script>
+  <script src="/js/profiler.js" type="text/javascript"></script>
+  <script src="/js/snake.js" type="text/javascript"></script>
+  <script src="/js/util.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" media="all" href="/style/style.css" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="field">
+      <div id="snake">
+      </div>
+    </div>
+    <div id="offerNewGameDiv">
+      <div id="offerNewGameDivInner">
+        <h3>Ты проиграл, лох.</h3>
+        <input id="offerNewGameButton" type="button" value="Играть снова" />
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      Initiator.initiate();
+      $('#offerNewGameButton').click(function(e) {
+        Initiator.initiate();
+      })
+    })
+
+  </script>
+
+</body>
+</html>
+
